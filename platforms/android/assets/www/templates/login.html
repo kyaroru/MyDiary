@@ -1,0 +1,73 @@
+
+<ion-view view-title="Login">
+  <ion-content class="plc.adding">
+    <div class="content text-center">
+      <div class="row">
+        <div class="col col-50 col-offset-25">
+            <br/><br/>
+            <img class="img-responsive" src="img/logo.png"/>
+            <div class="list list-inset">
+              <label class="item item-input item-icon-right">
+                <input type="password" ng-hide="showPassword" class="text-center" ng-model="lc.PIN" placeholder="Enter PIN" maxlength="4">
+                <input type="text" ng-show="showPassword" class="text-center" ng-model="lc.PIN" placeholder="Enter PIN" maxlength="4">
+
+                <i class="icon ion-eye" on-touch="showPassword = !showPassword"></i>
+              </label>
+
+            </div>
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="col col-20 col-offset-20">
+            <button class="button button-clear" ng-click="lc.add(1)">1</button>
+        </div>
+        <div class="col col-20">
+            <button class="button button-clear" ng-click="lc.add(2)">2</button>
+        </div>
+        <div class="col col-20">
+            <button class="button button-clear" ng-click="lc.add(3)">3</button>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col col-20 col-offset-20">
+            <button class="button button-clear" ng-click="lc.add(4)">4</button>
+        </div>
+        <div class="col col-20">
+            <button class="button button-clear" ng-click="lc.add(5)">5</button>
+        </div>
+        <div class="col col-20">
+            <button class="button button-clear" ng-click="lc.add(6)">6</button>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col col-20 col-offset-20">
+            <button class="button button-clear" ng-click="lc.add(7)">7</button>
+        </div>
+        <div class="col col-20">
+            <button class="button button-clear" ng-click="lc.add(8)">8</button>
+        </div>
+        <div class="col col-20">
+            <button class="button button-clear" ng-click="lc.add(9)">9</button>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col col-20 col-offset-20">
+          <button class="button button-clear ion-arrow-left-c" ng-click="lc.remove()"></button>
+        </div>
+        <div class="col col-20">
+            <button class="button button-clear" ng-click="lc.add(0)">0</button>
+        </div>
+        <div class="col col-20">
+            <button class="button button-clear ion-checkmark-round" ng-click="lc.login()"></button>
+        </div>
+      </div>
+
+      <p class="text-center">
+        <a href="#/forgot-password">Forgot password</a><br/>
+      </p>
+
+
+    </div>
+  </ion-content>
+</ion-view>

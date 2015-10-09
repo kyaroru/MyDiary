@@ -1,0 +1,23 @@
+<ion-view view-title="Home">
+  <ion-nav-buttons side="left">
+    <button class="button button-clear button-small ion-edit" ng-click="hc.openAddModal()">
+      Add
+    </button>
+  </ion-nav-buttons>
+  <ion-content class="padding">
+    <ion-refresher
+      pulling-text="Pull to refresh..."
+      on-refresh="hc.doRefresh()">
+    </ion-refresher>
+
+    <div class="list card" ng-repeat="entry in hc.entries">
+      <div class="item item-divider">{{entry.title}}</div>
+      <div class="item item-body">
+        <div>
+         {{entry.detail}}
+        </div>
+      </div>
+    </div>
+
+  </ion-content>
+</ion-view>
