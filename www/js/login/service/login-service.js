@@ -2,7 +2,6 @@
   "use strict";
 
   angular.module('login.service',[])
-
   .factory('LoginService', ['$http','kinvey','secret','session','$state', '$ionicHistory',
           function($http, kinvey, secret, session, $state, $ionicHistory) {
             var header = {
@@ -29,10 +28,8 @@
                           //console.log('login', response);
                           return response.data;
                       });
-
                 }
             };
-
             return service;
         }
   ]);
